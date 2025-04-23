@@ -1,4 +1,6 @@
 # 🌦️ Weather App with React
+![Preview](./weather_app_preview.png)
+
 
 Este é um aplicativo de previsão do tempo feito com **React.js**, que utiliza a API da [OpenWeather](https://openweathermap.org/api) para exibir informações climáticas em tempo real com um layout moderno e responsivo.
 
