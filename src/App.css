@@ -1,38 +1,98 @@
-.App {
+/* Fundo com imagem externa */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container do app com efeito vidro */
+.weather-app {
+  max-width: 450px;
+  margin: 5rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Título */
+.weather-app h1 {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Input e botão */
+.weather-app input {
+  padding: 12px 14px;
+  width: 60%;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.weather-app button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #00ffbf;
+  color: #222;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 255, 191, 0.5);
+  transition: all 0.3s ease;
+}
+
+.weather-app button:hover {
+  background: #00d9a3;
+  box-shadow: 0 6px 20px rgba(0, 255, 191, 0.6);
+}
+
+/* Resultado */
+.weather-info {
+  margin-top: 2.5rem;
+  padding: 1.8rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-info h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 6px 0;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .weather-app {
+    margin: 2rem;
+    padding: 2rem;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .weather-app input {
+    width: 100%;
+    margin-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .weather-app button {
+    width: 100%;
+    margin-left: 0;
   }
 }
